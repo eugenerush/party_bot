@@ -56,12 +56,12 @@ def check_callback_data(callback):
         see_party = types.InlineKeyboardButton(text='Посмотреть предстоящие тусовки', callback_data='show_party')
         markup.add(new_party, see_party)
 
-        bot.send_message(-1001172473473,
+        bot.send_message(-1001692617935,
                          text='Предложили новую тусовку \nДата ' + date + ', место: ' + place + ', будем - ' + do)
         question = 'Кто "За" ?'
         answer = ['Я', 'Не я', 'Макс лох']
 
-        bot.send_poll(-1001172473473, question, answer,
+        bot.send_poll(-1001692617935, question, answer,
                       is_anonymous=False, allows_multiple_answers=False)
 
         f = open('party.txt', 'a+')
